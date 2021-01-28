@@ -15,15 +15,22 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-family: 'Heebo', sans-serif;
+    color: ${props => props.theme.colors.text};
   }
 
   h1, h2, h3, h4, h5, h6, strong {
-    font-weight: 500;
+    font-weight: 600;
+    font-family: 'Barlow', sans-serif;
+    color: ${props => props.theme.colors.title};
+  }
+
+  input {
+    border: 1px solid #DCE2E5;
   }
 
   button {
     cursor: pointer;
+    border: 0;
   }
 `;
