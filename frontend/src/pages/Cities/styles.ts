@@ -5,20 +5,8 @@ export const Container = styled.div`
   flex: 1;
 `;
 
-export const ContentPane = styled.main`
+export const RightWrapper = styled.div`
   width: 100%;
-
-  header {
-    width: 100%;
-    height: 96px;
-    margin: 0 auto;
-    background-color: ${props => props.theme.colors.shapeLighter};
-    border-bottom: 1px solid #dce2e5;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 `;
 
 export const HeaderWrapper = styled.div`

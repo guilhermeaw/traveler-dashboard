@@ -6,7 +6,6 @@ import City from '../../models/City';
 
 import { Container, ActionButtonsWrapper } from './styles';
 
-
 interface CityCardProps {
   city: City;
 }
@@ -16,7 +15,7 @@ const CityCard: React.FC<CityCardProps> = ({ city }) => {
 
   const handleNavigateToCity = useCallback(() => {
     history.push(`/cities/${city.id}`);
-  }, [history, city.id]);
+  }, [history, city]);
 
   return (
     <Container

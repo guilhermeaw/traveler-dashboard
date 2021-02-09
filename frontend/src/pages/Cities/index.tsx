@@ -2,12 +2,15 @@ import React from 'react';
 
 import LeftNavBar from '../../components/LeftNavBar';
 import CityCard from '../../components/CityCard';
+import Header from '../../components/Header';
+import AddButton from '../../components/AddButton';
+import ContentPane from '../../components/ContentPane';
 
 import City from '../../models/City';
 
 import bombinhasIcon from '../../assets/bombinhas.jpg';
 
-import { Container, ContentPane, HeaderWrapper, CitiesList } from './styles';
+import { Container, RightWrapper, HeaderWrapper, CitiesList } from './styles';
 
 const cities: City[] = [
   {
@@ -22,23 +25,39 @@ const Cities: React.FC = () => {
     <Container>
       <LeftNavBar />
 
-      <ContentPane>
-        <header>
+      <RightWrapper>
+        <Header>
           <HeaderWrapper>
             <h1>Cidades</h1>
 
-            <button type="button">
-              <span>+ Adicionar um perfil</span>
-            </button>
+            <AddButton text="Adicionar um perfil" />
           </HeaderWrapper>
-        </header>
+        </Header>
 
-        <CitiesList>
-          {cities.map(city => (
-            <CityCard key={city.id} city={city} />
-          ))}
-        </CitiesList>
-      </ContentPane>
+        <ContentPane>
+          <CitiesList>
+            {cities.map(city => (
+              <>
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+                <CityCard key={city.id} city={city} />
+              </>
+            ))}
+          </CitiesList>
+        </ContentPane>
+      </RightWrapper>
     </Container>
   );
 }
