@@ -1,8 +1,9 @@
 import React from 'react';
 
 import LeftNavBar from '../../components/LeftNavBar';
+import CityCard from '../../components/CityCard';
 
-import { Container, ContentPane, HeaderWrapper } from './styles';
+import { Container, ContentPane, HeaderWrapper, CitiesList } from './styles';
 
 const Cities: React.FC = () => {
   return (
@@ -20,7 +21,17 @@ const Cities: React.FC = () => {
           </HeaderWrapper>
         </header>
 
-
+        <CitiesList>
+          <CityCard />
+          <CityCard />
+          <CityCard />
+          <CityCard />
+          <CityCard />
+          <CityCard />
+          <CityCard />
+          <CityCard />
+          <CityCard />
+        </CitiesList>
       </ContentPane>
     </Container>
   );

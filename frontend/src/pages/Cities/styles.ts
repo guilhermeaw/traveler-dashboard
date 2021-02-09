@@ -41,3 +41,12 @@ export const HeaderWrapper = styled.div`
     }
   }
 `;
+
+export const CitiesList = styled.div`
+  width: 1120px;
+  margin: 48px auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 32px;
+`;
