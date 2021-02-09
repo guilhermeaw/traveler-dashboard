@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
 
@@ -10,6 +11,7 @@ export const Container = styled.div`
   position: relative;
   border: 1px solid #DCE2E5;
   background-color: ${props => props.theme.colors.shapeLighter};
+  cursor: pointer;
 
   img {
     width: 100%;

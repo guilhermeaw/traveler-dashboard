@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { FiEdit3, FiTrash } from 'react-icons/fi';
+import { useHistory } from 'react-router-dom';
 
-import bombinhasIcon from '../../assets/bombinhas.jpg';
+import City from '../../models/City';
 
 import { Container, ActionButtonsWrapper } from './styles';
 
-const CityCard: React.FC = () => {
+
+interface CityCardProps {
+  city: City;
+}
+
+const CityCard: React.FC<CityCardProps> = ({ city }) => {
+  const history = useHistory();
+
+  const handleNavigateToCity = useCallback(() => {
+    history.push(`/cities/${city.id}`);
+  }, [history, city.id]);
+
   return (
-    <Container>
-      <img src={bombinhasIcon} alt="city" />
+    <Container
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={handleNavigateToCity}
+    >
+      <img src={city.image} alt="city" />
 
       <ActionButtonsWrapper>
         <button type="button">

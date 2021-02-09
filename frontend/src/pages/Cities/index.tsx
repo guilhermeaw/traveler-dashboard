@@ -3,7 +3,19 @@ import React from 'react';
 import LeftNavBar from '../../components/LeftNavBar';
 import CityCard from '../../components/CityCard';
 
+import City from '../../models/City';
+
+import bombinhasIcon from '../../assets/bombinhas.jpg';
+
 import { Container, ContentPane, HeaderWrapper, CitiesList } from './styles';
+
+const cities: City[] = [
+  {
+    id: '1',
+    name: 'Bombinhas',
+    image: bombinhasIcon
+  }
+]
 
 const Cities: React.FC = () => {
   return (
@@ -22,15 +34,9 @@ const Cities: React.FC = () => {
         </header>
 
         <CitiesList>
-          <CityCard />
-          <CityCard />
-          <CityCard />
-          <CityCard />
-          <CityCard />
-          <CityCard />
-          <CityCard />
-          <CityCard />
-          <CityCard />
+          {cities.map(city => (
+            <CityCard key={city.id} city={city} />
+          ))}
         </CitiesList>
       </ContentPane>
     </Container>
