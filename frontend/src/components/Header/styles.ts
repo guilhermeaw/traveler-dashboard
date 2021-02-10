@@ -5,7 +5,6 @@ export const Container = styled.header`
   height: 96px;
   background-color: ${props => props.theme.colors.shapeLighter};
   border-bottom: 1px solid #dce2e5;
-  position: fixed;
 
   display: flex;
   align-items: center;

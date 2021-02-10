@@ -37,23 +37,7 @@ const Cities: React.FC = () => {
         <ContentPane>
           <CitiesList>
             {cities.map(city => (
-              <>
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-                <CityCard key={city.id} city={city} />
-              </>
+              <CityCard key={city.id} city={city} />
             ))}
           </CitiesList>
         </ContentPane>
